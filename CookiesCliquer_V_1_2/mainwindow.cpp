@@ -41,7 +41,7 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(timer, &QTimer::timeout, this, [this]()
     {
         cookies += cookiesParSeconde;
-        nb_cookies_total = cookies;
+        nb_cookies_total += cookies;
         additionneur_cookies = cookies / 100;
         ui->labelScore->setText(QString::number(cookies) + " cookies");
     });
